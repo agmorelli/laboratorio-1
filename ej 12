@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+ 	int cont=1, impar=0;
+ 	
+ 	for(cont=1;cont<=100;cont=cont+2)
+ 	{
+	 				   printf("%d\n", cont);
+	 				   if(cont%2!=0)
+	 				   {
+					   			impar++;
+								}
+								
+     }
+     printf("la cantidad de impares es: %d\n", impar);
+  
+  system("PAUSE");	
+  return 0;
+}
+  
