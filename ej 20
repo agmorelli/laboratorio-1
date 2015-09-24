@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+ 	int i=0, num, sumapos=0, proneg;
+ 	
+	 
+	 for(i=0;i<10;i++)
+	 {
+        printf("Ingrese un numero: ");
+		scanf("%d",&num);
+						        while(num==0){
+						 		printf("el numero no debe ser 0: ");
+		                        fflush(stdin);
+	                            scanf("%d",&num);
+								}
+		if(num<0&&i==0)
+		         {
+		 		 proneg=num;
+				 }
+		if(num<0&&i>0)
+		{
+		 			  proneg=num*proneg;
+					  }
+		if(num>0)
+		{
+		 		 sumapos=sumapos+num;
+				 }
+	 }
+	 printf("La suma de los positivos es: %d \n", sumapos);
+	 printf("El producto de los negativos es: %d \n", proneg);
+	 
+  system("PAUSE");
+   return 0;
+				 			  		 
+				 
+		 		 
+}
+  
