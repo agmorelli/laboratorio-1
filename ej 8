@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+	int i;
+	int num;
+	int mascero=0;
+	int menoscero=0;
+	
+	for(i=0;i<10;i++){
+		
+		printf("ingrese numero: ");
+		scanf("%d", &num);
+		
+		if(num>0){
+			mascero++;
+		}
+		else{
+			menoscero++;
+		}
+		
+		
+	}
+		printf("La cantidad de numeros mayores a cero es:%d\nLa cantidad de numeros menores a cero es:%d\n",mascero, menoscero);
+	
+	return 0;
+}
