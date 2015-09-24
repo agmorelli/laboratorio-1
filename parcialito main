@@ -1,0 +1,84 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <ctype.h>
+#define MAX 10
+#include "libex.h"
+#include <string.h>
+
+int main(int argc, char *argv[]) {
+	
+	int precio[MAX];
+	int codigo[MAX];
+	int cantidad[MAX];	
+	int i;
+	char descripcion [MAX] [51];
+	int op;
+	int cont=0;
+	
+	for(i=0;i<MAX;i++){
+		precio[i]=-1;
+		codigo[i]=-1;
+		cantidad[i]=-1;
+		descripcion[i][0]='\0';
+	}
+	
+	do{
+		system("cls");
+		op=menu("1-ALTA\n2-MODIFICAR\n3-BAJA\n4-INFORMAR\n5-LISTA\n6-SALIR\n");
+	
+	 switch(op){
+	 	
+	 	case 1://ALTA
+	 	system("cls");
+	 	alta(codigo, descripcion, precio, cantidad, MAX, cont);
+	 	/*printf("\nproducto  %d\ncodigo  %d\ndescripcion  %s\nprecio  %d\ncantidad  %d\n",cont+1,codigo[cont],descripcion[cont],precio[cont],cantidad[cont]);*/
+	 	cont++;
+	 	break;
+	 	
+	 	case 2://modificar
+	 	system("cls");
+	 	modificar(codigo, descripcion, precio, cantidad, MAX, cont);
+	 	/*for(i=0;i<MAX;i++){
+	 	printf("\nproducto  %d\ncodigo  %d\ndescripcion  %s\nprecio  %d\ncantidad  %d\n",i+1,codigo[i],descripcion[i],precio[i],cantidad[i]);
+	    }
+	 	system("pause");*/
+	 	break;
+	 	
+	 	case 3://BAJA
+	 	system("cls");
+	 	baja(codigo, descripcion, precio, cantidad, MAX, cont);
+	 	/*for(i=0;i<MAX;i++){
+	 	printf("\nproducto  %d\ncodigo  %d\ndescripcion  %s\nprecio  %d\ncantidad  %d\n",i+1,codigo[i],descripcion[i],precio[i],cantidad[i]);
+	    }
+	 	system("pause");*/
+	 	system("cls");
+	 	break;
+	 	
+	 	case 4://INFORMAR
+	 	system("cls");
+	 	mayor(codigo, descripcion, precio, cantidad, MAX, cont);
+	 	break;
+	 	
+	 	case 5://LISTAR
+	 		system("cls");
+	 		lista(codigo, descripcion, precio, cantidad, MAX, cont);
+	 		break;
+	 		
+	 		
+	 	
+	 	
+	 	
+	 	
+		
+			
+		
+		
+		 
+}
+ 
+}while(op!=6);
+ 
+
+	return 0;
+}
