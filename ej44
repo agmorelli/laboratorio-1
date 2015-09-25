@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+#define MAX 3
+
+int main(int argc, char *argv[]) {
+	
+	float altura[MAX];
+	char nombre[10][MAX];
+	char apellido[10][MAX];
+	float mayor=0;
+	char mayornom[10];
+	char mayorape[10];
+	int i;
+	
+	for(i=0;i<MAX;i++){
+		
+		printf("\ningrese nombre: ");
+		fflush(stdin);
+		gets(nombre[i]);
+		
+		printf("\ningrese apellido: ");
+		fflush(stdin);
+		gets(apellido[i]);
+		
+		printf("\ningrese altura: ");
+		scanf("%f",&altura[i]);
+		
+		if(altura[i]>mayor){
+			mayor=altura[i];
+			strcpy(mayornom,nombre[i]);
+			strcpy(mayorape,apellido[i]);
+		}
+		
+	}
+	
+	printf("El alumno mas alto es: %s %s mide %f mts.\n",mayornom,mayorape,mayor);
+	
+	return 0;
+}
