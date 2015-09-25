@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main(int argc, char *argv[]) {
+	
+	system("cls");
+	
+	int num1;
+	int num2;
+	int resultado;
+	
+	printf("ingrese numero 1: ");
+	scanf("%d",&num1);
+	
+	printf("ingrese numero 2: ");
+	scanf("%d",&num2);
+	
+	resultado=num1-num2;
+	
+	if(resultado<0){
+		printf("resultado negativo\n");
+	}
+	if(resultado>0){
+		printf("resultado positivo\n");
+	}
+	
+	return 0;
+}
